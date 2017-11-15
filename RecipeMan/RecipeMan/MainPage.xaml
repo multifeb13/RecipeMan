@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RecipeMan"
+             x:Class="RecipeMan.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView HeightRequest="120"></BoxView>
+
+            <Label Text="Recipe Man" 
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="Medium"
+                   TextColor="Black"/>
+
+            <BoxView HeightRequest="50"></BoxView>
+
+            <Button x:Name =" RecipeListPageBtn"
+                   Text="レシピ一覧"
+                   BackgroundColor="PaleGoldenrod"
+                   HorizontalOptions="CenterAndExpand"
+                   WidthRequest="300"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="Small"
+                   BorderRadius="5"/>
+
+            <Button x:Name =" RegistPageBtn"
+                   Text="レシピ登録"
+                   BackgroundColor="PaleGoldenrod"
+                   HorizontalOptions="CenterAndExpand"
+                   WidthRequest="300"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="Small"
+                   BorderRadius="5"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

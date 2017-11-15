@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipeMan.DisplayRecipePage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <BoxView HeightRequest="10"/>
+
+            <Label Text="{Binding Name}" TextColor="Black" Font="30" HorizontalOptions="Center"/>
+            <BoxView HeightRequest="10"/>
+
+            <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="1" Text="材料：" Grid.Column="0"/>
+                <Label Text="{Binding Material}" TextColor="Black" Grid.Row="1" Grid.Column="1" />
+                <Label Text="{Binding Amount}" TextColor="Black" Grid.Row="1" Grid.Column="2" />
+            </Grid>
+            <BoxView HeightRequest="10"/>
+
+            <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="1" Text="カテゴリ：" Grid.Column="0"/>
+                <Label Text="{Binding Category1}" TextColor="Black" Grid.Row="1" Grid.Column="1" />
+                <Label Text="{Binding Category2}" TextColor="Black" Grid.Row="1" Grid.Column="2" />
+            </Grid>
+            <BoxView HeightRequest="10"/>
+
+            <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="1" Text="調理時間：" Grid.Column="0"/>
+                <Label Text="{Binding Hour}" TextColor="Black" Grid.Row="1" Grid.Column="1" />
+                <Label Grid.Row="1" Text="時間" Grid.Column="2"/>
+                <Label Text="{Binding Minute}" TextColor="Black" Grid.Row="1" Grid.Column="3" />
+                <Label Grid.Row="1" Text="分" Grid.Column="4"/>
+            </Grid>
+            <BoxView HeightRequest="10"/>
+
+            <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="1" Text="作り方：" />
+                <Label Text="{Binding HowToMake}" TextColor="Black" Grid.Row="1" Grid.Column="1" />
+            </Grid>
+            <BoxView HeightRequest="10"/>
+
+            <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="1" Text="メモ：" />
+                <Label Text="{Binding Memo}" TextColor="Black" Grid.Row="1" Grid.Column="1" />
+            </Grid>
+            <BoxView HeightRequest="10"/>
+
+            <Button Text="編集"
+                   Clicked="EditRecipe"
+                   HorizontalOptions="CenterAndExpand"
+                   BorderColor="Red"
+                   BackgroundColor="Gray"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="Small"
+                   BorderRadius="500"/>
+
+            <Button Text="戻る"
+                   Clicked="GoRecipeListPage"
+                   HorizontalOptions="CenterAndExpand"
+                   BorderColor="Red"
+                   BackgroundColor="Gray"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="Small"
+                   BorderRadius="500"/>
+
+            <Button Text="削除"
+                   Clicked="DeleteRecipe"
+                   HorizontalOptions="CenterAndExpand"
+                   BorderColor="Red"
+                   BackgroundColor="Gray"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="Small"
+                   BorderRadius="500"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

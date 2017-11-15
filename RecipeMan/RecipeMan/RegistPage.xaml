@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipeMan.RegistPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="stack1" Margin="0,20,0,0" HorizontalOptions="CenterAndExpand">
+                <Label Text="レシピ登録"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="Medium"
+                   TextColor="Black"/>
+
+                <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="1" Text="料理名" />
+                    <Entry x:Name="Name" Text="{Binding Path=Name, Mode=OneWay}" PropertyChanged="Name_PropertyChanged" Grid.Row="1" Grid.Column="1" />
+                </Grid>
+
+                <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="MaterialLabel1" Grid.Row="0" Grid.Column="0" Text="材料" />
+                    <Entry x:Name="Material1" Text="{Binding Path=Material1, Mode=OneWay}" PropertyChanged="Material1_PropertyChanged" Grid.Row="0" Grid.Column="1" />
+                    <Label x:Name="AmountLabel1" Grid.Row="0" Grid.Column="2" Text="分量" />
+                    <Entry x:Name="Amount1" Text="{Binding Path=Amount1, Mode=OneWay}" PropertyChanged="Amount1_PropertyChanged" Grid.Row="0" Grid.Column="3" />
+
+                    <Label x:Name="MaterialLabel2" Grid.Row="1" Grid.Column="0" Text="材料" />
+                    <Entry x:Name="Material2" Text="{Binding Path=Material2, Mode=OneWay}" PropertyChanged="Material2_PropertyChanged" Grid.Row="1" Grid.Column="1" />
+                    <Label x:Name="AmountLabel2" Grid.Row="1" Grid.Column="2" Text="分量" />
+                    <Entry x:Name="Amount2" Text="{Binding Path=Amount2, Mode=OneWay}" PropertyChanged="Amount2_PropertyChanged" Grid.Row="1" Grid.Column="3" />
+                    
+                    <Label x:Name="MaterialLabel3" Grid.Row="2" Grid.Column="0" Text="材料" />
+                    <Entry x:Name="Material3" Text="{Binding Path=Material3, Mode=OneWay}" PropertyChanged="Material3_PropertyChanged" Grid.Row="2" Grid.Column="1" />
+                    <Label x:Name="AmountLabel3" Grid.Row="2" Grid.Column="2" Text="分量" />
+                    <Entry x:Name="Amount3" Text="{Binding Path=Amount3, Mode=OneWay}" PropertyChanged="Amount3_PropertyChanged" Grid.Row="2" Grid.Column="3" />
+
+                </Grid>
+
+                <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="AddButton" Text="追加" Grid.Column="4"
+                   Clicked="AddMaterial"
+                   BorderColor="Red"
+                   BackgroundColor="Gray"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="Small"
+                   BorderRadius="5"/>
+                </Grid>
+                
+                <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="CategoryLabel" Grid.Row="1" Grid.Column="0" Text="カテゴリ" />
+                    <Picker x:Name="Category1" Grid.Row="1" Grid.Column="1" PropertyChanged="Category1_PropertyChanged">
+                        <Picker.Items>
+                            <x:String>選択なし</x:String>
+                            <x:String>和風</x:String>
+                            <x:String>洋風</x:String>
+                            <x:String>中華</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Picker x:Name="Category2" Grid.Row="1" Grid.Column="2" PropertyChanged="Category2_PropertyChanged" >
+                        <Picker.Items>
+                            <x:String>選択なし</x:String>
+                            <x:String>主食</x:String>
+                            <x:String>副菜</x:String>
+                            <x:String>汁物</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+
+                <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="TimeLabel" Grid.Row="1" Grid.Column="0" Text="調理時間" />
+                    <Picker x:Name="Hour" Grid.Row="1" Grid.Column="1"
+                            PropertyChanged="Hour_PropertyChanged">
+                    </Picker>
+                    <Label x:Name="HourLabel" Grid.Row="1" Grid.Column="2" Text="時間" />
+
+                    <Picker x:Name="Minute" Grid.Row="1" Grid.Column="3"
+                            PropertyChanged="Minute_PropertyChanged">
+                    </Picker>
+                    <Label x:Name="MinuteLabel" Grid.Row="1" Grid.Column="4" Text="分" />
+                </Grid>
+
+                <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="1" Text="作り方" />
+                    <Editor x:Name="HowToMake" Text="{Binding Path=HowToMake, Mode=OneWay}" PropertyChanged="HowToMake_PropertyChanged" Grid.Row="1" Grid.Column="1" HeightRequest="80" />
+
+                    <Label Grid.Row="2" Text="メモ" />
+                    <Editor x:Name="Memo" Text="{Binding Path=Memo, Mode=OneWay}" PropertyChanged="Memo_PropertyChanged" Grid.Row="2" Grid.Column="1" HeightRequest="80" />
+
+                </Grid>
+
+                <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="RegistBtn" Text="完了"
+                   HorizontalOptions="Center"
+                   BorderColor="Red"
+                   BackgroundColor="Gray"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="Small"
+                   BorderRadius="5"
+                   Grid.Column="0"/>
+
+                    <Button x:Name ="GoRecipeListPageBtn"  Text="戻る"
+                   HorizontalOptions="Center"
+                   BorderColor="Red"
+                   BackgroundColor="Gray"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="Small"
+                   BorderRadius="5"
+                   Grid.Column="1"/>
+                </Grid>
+
+                <Button x:Name="BackHomeBtn" Text="HOME"
+                   HorizontalOptions="CenterAndExpand"
+                   BorderColor="Red"
+                   BackgroundColor="Gray"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="Small"
+                   BorderRadius="5"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

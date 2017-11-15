@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipeMan.MaterialPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+
+                    <BoxView Grid.Row="1" Grid.Column="0"/>
+                    <Label x:Name="MaterialLabel" Grid.Row="1" Grid.Column="1" Text="材料" />
+                    <BoxView Grid.Row="1" Grid.Column="2"/>
+                    <Label x:Name="AmountLabel" Grid.Row="1" Grid.Column="3" Text="分量" />
+                    <BoxView Grid.Row="1" Grid.Column="4"/>
+                </Grid>
+
+                <Grid HorizontalOptions="Center" VerticalOptions="Center"
+              WidthRequest="320" RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="10*" />
+                        <ColumnDefinition Width="10*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="Label1" Text="1." Grid.Row="0" Grid.Column="0" />
+                    <Entry x:Name="Material1" Text="{Binding Path=Material1, Mode=OneWay}" PropertyChanged="Material1_PropertyChanged" Grid.Row="0" Grid.Column="1" />
+                    <Entry x:Name="Amount1" Text="{Binding Path=Amount1, Mode=OneWay}" PropertyChanged="Amount1_PropertyChanged" Grid.Row="0" Grid.Column="2" />
+
+                    <Label x:Name="Label2" Text="2." Grid.Row="1" Grid.Column="0" />
+                    <Entry x:Name="Material2" Text="{Binding Path=Material2, Mode=OneWay}" PropertyChanged="Material2_PropertyChanged" Grid.Row="1" Grid.Column="1" />
+                    <Entry x:Name="Amount2" Text="{Binding Path=Amount2, Mode=OneWay}" PropertyChanged="Amount2_PropertyChanged" Grid.Row="1" Grid.Column="2" />
+
+                    <Label x:Name="Label3" Text="3." Grid.Row="2" Grid.Column="0" />
+                    <Entry x:Name="Material3" Text="{Binding Path=Material3, Mode=OneWay}" PropertyChanged="Material3_PropertyChanged" Grid.Row="2" Grid.Column="1" />
+                    <Entry x:Name="Amount3" Text="{Binding Path=Amount3, Mode=OneWay}" PropertyChanged="Amount3_PropertyChanged" Grid.Row="2" Grid.Column="2" />
+
+                    <Label x:Name="Label4" Text="4." Grid.Row="3" Grid.Column="0" />
+                    <Entry x:Name="Material4" Text="{Binding Path=Material4, Mode=OneWay}" PropertyChanged="Material4_PropertyChanged" Grid.Row="3" Grid.Column="1" />
+                    <Entry x:Name="Amount4" Text="{Binding Path=Amount4, Mode=OneWay}" PropertyChanged="Amount4_PropertyChanged" Grid.Row="3" Grid.Column="2" />
+
+                    <Label x:Name="Label5" Text="5." Grid.Row="4" Grid.Column="0" />
+                    <Entry x:Name="Material5" Text="{Binding Path=Material5, Mode=OneWay}" PropertyChanged="Material5_PropertyChanged" Grid.Row="4" Grid.Column="1" />
+                    <Entry x:Name="Amount5" Text="{Binding Path=Amount5, Mode=OneWay}" PropertyChanged="Amount5_PropertyChanged" Grid.Row="4" Grid.Column="2" />
+
+                    <Label x:Name="Label6" Text="6." Grid.Row="5" Grid.Column="0" />
+                    <Entry x:Name="Material6" Text="{Binding Path=Material6, Mode=OneWay}" PropertyChanged="Material6_PropertyChanged" Grid.Row="5" Grid.Column="1" />
+                    <Entry x:Name="Amount6" Text="{Binding Path=Amount6, Mode=OneWay}" PropertyChanged="Amount6_PropertyChanged" Grid.Row="5" Grid.Column="2" />
+
+                    <Label x:Name="Label7" Text="7." Grid.Row="6" Grid.Column="0" />
+                    <Entry x:Name="Material7" Text="{Binding Path=Material7, Mode=OneWay}" PropertyChanged="Material7_PropertyChanged" Grid.Row="6" Grid.Column="1" />
+                    <Entry x:Name="Amount7" Text="{Binding Path=Amount7, Mode=OneWay}" PropertyChanged="Amount7_PropertyChanged" Grid.Row="6" Grid.Column="2" />
+
+                    <Label x:Name="Label8" Text="8." Grid.Row="7" Grid.Column="0" />
+                    <Entry x:Name="Material8" Text="{Binding Path=Material8, Mode=OneWay}" PropertyChanged="Material8_PropertyChanged" Grid.Row="7" Grid.Column="1" />
+                    <Entry x:Name="Amount8" Text="{Binding Path=Amount8, Mode=OneWay}" PropertyChanged="Amount8_PropertyChanged" Grid.Row="7" Grid.Column="2" />
+
+                    <Label x:Name="Label9" Text="9." Grid.Row="8" Grid.Column="0" />
+                    <Entry x:Name="Material9" Text="{Binding Path=Material9, Mode=OneWay}" PropertyChanged="Material9_PropertyChanged" Grid.Row="8" Grid.Column="1" />
+                    <Entry x:Name="Amount9" Text="{Binding Path=Amount9, Mode=OneWay}" PropertyChanged="Amount9_PropertyChanged" Grid.Row="8" Grid.Column="2" />
+
+                    <Label x:Name="Label10" Text="10." Grid.Row="9" Grid.Column="0" />
+                    <Entry x:Name="Material10" Text="{Binding Path=Material10, Mode=OneWay}" PropertyChanged="Material10_PropertyChanged" Grid.Row="9" Grid.Column="1" />
+                    <Entry x:Name="Amount10" Text="{Binding Path=Amount10, Mode=OneWay}" PropertyChanged="Amount10_PropertyChanged" Grid.Row="9" Grid.Column="2" />
+
+                    <Label x:Name="Label11" Text="11." Grid.Row="10" Grid.Column="0" />
+                    <Entry x:Name="Material11" Text="{Binding Path=Material11, Mode=OneWay}" PropertyChanged="Material11_PropertyChanged" Grid.Row="10" Grid.Column="1" />
+                    <Entry x:Name="Amount11" Text="{Binding Path=Amount11, Mode=OneWay}" PropertyChanged="Amount11_PropertyChanged" Grid.Row="10" Grid.Column="2" />
+
+                    <Label x:Name="Label12" Text="12." Grid.Row="11" Grid.Column="0" />
+                    <Entry x:Name="Material12" Text="{Binding Path=Material12, Mode=OneWay}" PropertyChanged="Material12_PropertyChanged" Grid.Row="11" Grid.Column="1" />
+                    <Entry x:Name="Amount12" Text="{Binding Path=Amount12, Mode=OneWay}" PropertyChanged="Amount12_PropertyChanged" Grid.Row="11" Grid.Column="2" />
+
+                    <Label x:Name="Label13" Text="13." Grid.Row="12" Grid.Column="0" />
+                    <Entry x:Name="Material13" Text="{Binding Path=Material13, Mode=OneWay}" PropertyChanged="Material13_PropertyChanged" Grid.Row="12" Grid.Column="1" />
+                    <Entry x:Name="Amount13" Text="{Binding Path=Amount13, Mode=OneWay}" PropertyChanged="Amount13_PropertyChanged" Grid.Row="12" Grid.Column="2" />
+
+                    <Label x:Name="Label14" Text="14." Grid.Row="13" Grid.Column="0" />
+                    <Entry x:Name="Material14" Text="{Binding Path=Material14, Mode=OneWay}" PropertyChanged="Material14_PropertyChanged" Grid.Row="13" Grid.Column="1" />
+                    <Entry x:Name="Amount14" Text="{Binding Path=Amount14, Mode=OneWay}" PropertyChanged="Amount14_PropertyChanged" Grid.Row="13" Grid.Column="2" />
+
+                    <Label x:Name="Label15" Text="15." Grid.Row="14" Grid.Column="0" />
+                    <Entry x:Name="Material15" Text="{Binding Path=Material15, Mode=OneWay}" PropertyChanged="Material15_PropertyChanged" Grid.Row="14" Grid.Column="1" />
+                    <Entry x:Name="Amount15" Text="{Binding Path=Amount15, Mode=OneWay}" PropertyChanged="Amount15_PropertyChanged" Grid.Row="14" Grid.Column="2" />
+
+                    <Label x:Name="Label16" Text="16." Grid.Row="15" Grid.Column="0" />
+                    <Entry x:Name="Material16" Text="{Binding Path=Material16, Mode=OneWay}" PropertyChanged="Material16_PropertyChanged" Grid.Row="15" Grid.Column="1" />
+                    <Entry x:Name="Amount16" Text="{Binding Path=Amount16, Mode=OneWay}" PropertyChanged="Amount16_PropertyChanged" Grid.Row="15" Grid.Column="2" />
+
+                    <Label x:Name="Label17" Text="17." Grid.Row="16" Grid.Column="0" />
+                    <Entry x:Name="Material17" Text="{Binding Path=Material17, Mode=OneWay}" PropertyChanged="Material17_PropertyChanged" Grid.Row="16" Grid.Column="1" />
+                    <Entry x:Name="Amount17" Text="{Binding Path=Amount17, Mode=OneWay}" PropertyChanged="Amount17_PropertyChanged" Grid.Row="16" Grid.Column="2" />
+
+                    <Label x:Name="Label18" Text="18." Grid.Row="17" Grid.Column="0" />
+                    <Entry x:Name="Material18" Text="{Binding Path=Material18, Mode=OneWay}" PropertyChanged="Material18_PropertyChanged" Grid.Row="17" Grid.Column="1" />
+                    <Entry x:Name="Amount18" Text="{Binding Path=Amount18, Mode=OneWay}" PropertyChanged="Amount18_PropertyChanged" Grid.Row="17" Grid.Column="2" />
+
+                    <Label x:Name="Label19" Text="19." Grid.Row="18" Grid.Column="0" />
+                    <Entry x:Name="Material19" Text="{Binding Path=Material19, Mode=OneWay}" PropertyChanged="Material19_PropertyChanged" Grid.Row="18" Grid.Column="1" />
+                    <Entry x:Name="Amount19" Text="{Binding Path=Amount19, Mode=OneWay}" PropertyChanged="Amount19_PropertyChanged" Grid.Row="18" Grid.Column="2" />
+
+                    <Label x:Name="Label20" Text="20." Grid.Row="19" Grid.Column="0" />
+                    <Entry x:Name="Material20" Text="{Binding Path=Material20, Mode=OneWay}" PropertyChanged="Material20_PropertyChanged" Grid.Row="19" Grid.Column="1" />
+                    <Entry x:Name="Amount20" Text="{Binding Path=Amount20, Mode=OneWay}" PropertyChanged="Amount20_PropertyChanged" Grid.Row="19" Grid.Column="2" />
+
+                    <Label x:Name="Label21" Text="21." Grid.Row="20" Grid.Column="0" />
+                    <Entry x:Name="Material21" Text="{Binding Path=Material21, Mode=OneWay}" PropertyChanged="Material21_PropertyChanged" Grid.Row="20" Grid.Column="1" />
+                    <Entry x:Name="Amount21" Text="{Binding Path=Amount21, Mode=OneWay}" PropertyChanged="Amount21_PropertyChanged" Grid.Row="20" Grid.Column="2" />
+
+                    <Label x:Name="Label22" Text="22." Grid.Row="21" Grid.Column="0" />
+                    <Entry x:Name="Material22" Text="{Binding Path=Material22, Mode=OneWay}" PropertyChanged="Material22_PropertyChanged" Grid.Row="21" Grid.Column="1" />
+                    <Entry x:Name="Amount22" Text="{Binding Path=Amount22, Mode=OneWay}" PropertyChanged="Amount22_PropertyChanged" Grid.Row="21" Grid.Column="2" />
+
+                    <Label x:Name="Label23" Text="23." Grid.Row="22" Grid.Column="0" />
+                    <Entry x:Name="Material23" Text="{Binding Path=Material23, Mode=OneWay}" PropertyChanged="Material23_PropertyChanged" Grid.Row="22" Grid.Column="1" />
+                    <Entry x:Name="Amount23" Text="{Binding Path=Amount23, Mode=OneWay}" PropertyChanged="Amount23_PropertyChanged" Grid.Row="22" Grid.Column="2" />
+
+                    <Label x:Name="Label24" Text="24." Grid.Row="23" Grid.Column="0" />
+                    <Entry x:Name="Material24" Text="{Binding Path=Material24, Mode=OneWay}" PropertyChanged="Material24_PropertyChanged" Grid.Row="23" Grid.Column="1" />
+                    <Entry x:Name="Amount24" Text="{Binding Path=Amount24, Mode=OneWay}" PropertyChanged="Amount24_PropertyChanged" Grid.Row="23" Grid.Column="2" />
+
+                    <Label x:Name="Label25" Text="25." Grid.Row="24" Grid.Column="0" />
+                    <Entry x:Name="Material25" Text="{Binding Path=Material25, Mode=OneWay}" PropertyChanged="Material25_PropertyChanged" Grid.Row="24" Grid.Column="1" />
+                    <Entry x:Name="Amount25" Text="{Binding Path=Amount25, Mode=OneWay}" PropertyChanged="Amount25_PropertyChanged" Grid.Row="24" Grid.Column="2" />
+
+                    <Label x:Name="Label26" Text="26." Grid.Row="25" Grid.Column="0" />
+                    <Entry x:Name="Material26" Text="{Binding Path=Material26, Mode=OneWay}" PropertyChanged="Material26_PropertyChanged" Grid.Row="25" Grid.Column="1" />
+                    <Entry x:Name="Amount26" Text="{Binding Path=Amount26, Mode=OneWay}" PropertyChanged="Amount26_PropertyChanged" Grid.Row="25" Grid.Column="2" />
+
+                    <Label x:Name="Label27" Text="27." Grid.Row="26" Grid.Column="0" />
+                    <Entry x:Name="Material27" Text="{Binding Path=Material27, Mode=OneWay}" PropertyChanged="Material27_PropertyChanged" Grid.Row="26" Grid.Column="1" />
+                    <Entry x:Name="Amount27" Text="{Binding Path=Amount27, Mode=OneWay}" PropertyChanged="Amount27_PropertyChanged" Grid.Row="26" Grid.Column="2" />
+
+                    <Label x:Name="Label28" Text="28." Grid.Row="27" Grid.Column="0" />
+                    <Entry x:Name="Material28" Text="{Binding Path=Material28, Mode=OneWay}" PropertyChanged="Material28_PropertyChanged" Grid.Row="27" Grid.Column="1" />
+                    <Entry x:Name="Amount28" Text="{Binding Path=Amount28, Mode=OneWay}" PropertyChanged="Amount28_PropertyChanged" Grid.Row="27" Grid.Column="2" />
+
+                    <Label x:Name="Label29" Text="29." Grid.Row="28" Grid.Column="0" />
+                    <Entry x:Name="Material29" Text="{Binding Path=Material29, Mode=OneWay}" PropertyChanged="Material29_PropertyChanged" Grid.Row="28" Grid.Column="1" />
+                    <Entry x:Name="Amount29" Text="{Binding Path=Amount29, Mode=OneWay}" PropertyChanged="Amount29_PropertyChanged" Grid.Row="28" Grid.Column="2" />
+
+                    <Label x:Name="Label30" Text="30." Grid.Row="29" Grid.Column="0" />
+                    <Entry x:Name="Material30" Text="{Binding Path=Material30, Mode=OneWay}" PropertyChanged="Material30_PropertyChanged" Grid.Row="29" Grid.Column="1" />
+                    <Entry x:Name="Amount30" Text="{Binding Path=Amount30, Mode=OneWay}" PropertyChanged="Amount30_PropertyChanged" Grid.Row="29" Grid.Column="2" />
+                </Grid>
+
+                <Button Text="戻る"
+                        Clicked="GoBackBtn"
+                   HorizontalOptions="Center"
+                   BorderColor="Red"
+                   BackgroundColor="Gray"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="Small"
+                   BorderRadius="5"
+                   Grid.Column="1"/>
+
+                <ContentView x:Name="BackBtn"
+                             BackgroundColor="Aqua"
+                            />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
